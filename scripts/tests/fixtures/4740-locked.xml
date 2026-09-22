@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SYNTHETIC TEST FIXTURE. Not collected lab evidence. -->
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" />
+    <EventID>4740</EventID>
+    <Version>0</Version>
+    <TimeCreated SystemTime="2026-01-01T00:00:00.1234567Z" />
+    <EventRecordID>104</EventRecordID>
+    <Channel>Security</Channel>
+    <Computer>LAB-CLIENT</Computer>
+  </System>
+  <EventData>
+    <Data Name="TargetUserName">soc-test</Data>
+    <Data Name="TargetDomainName">LAB-CLIENT</Data>
+    <Data Name="TargetSid">S-1-5-21-111-222-333-1001</Data>
+  </EventData>
+</Event>

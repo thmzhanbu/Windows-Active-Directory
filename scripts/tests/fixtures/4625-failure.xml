@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SYNTHETIC TEST FIXTURE. Not collected lab evidence. -->
+<Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+  <System>
+    <Provider Name="Microsoft-Windows-Security-Auditing" />
+    <EventID>4625</EventID>
+    <Version>0</Version>
+    <TimeCreated SystemTime="2026-01-01T00:00:00.1234567Z" />
+    <EventRecordID>101</EventRecordID>
+    <Channel>Security</Channel>
+    <Computer>LAB-CLIENT</Computer>
+  </System>
+  <EventData>
+    <Data Name="SubStatus">0xc000006a</Data>
+    <Data Name="TargetUserName">soc-test</Data>
+    <Data Name="Status">0xc000006d</Data>
+    <Data Name="TargetDomainName">LAB-CLIENT</Data>
+    <Data Name="LogonType">2</Data>
+    <Data Name="IpAddress">127.0.0.1</Data>
+    <Data Name="TargetUserSid">S-1-0-0</Data>
+    <Data Name="FailureReason">%%2313</Data>
+  </EventData>
+</Event>
