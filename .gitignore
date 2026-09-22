@@ -1,0 +1,43 @@
+# Host and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Raw and generated evidence stays private
+*.evtx
+raw-private/
+analysis-private/
+review-private/
+audit-private/
+Evidence/
+evidence/raw-private/
+evidence/review-private/
+evidence/audit-private/
+auth-events-*.csv
+evidence-hashes-*.csv
+!evidence/evidence-hashes-summary.csv
+*.clixml
+*.reg
+*.bak
+*.zip
+
+# Virtual machines and memory
+*.vmdk
+*.vmem
+*.vmss
+*.vmsn
+*.vmx
+*.nvram
+*.iso
+*.dmp
+
+# Credentials and local configuration
+.env
+.env.*
+*.pfx
+*.p12
+*.pem
+*.key
+credentials*
+secrets*
