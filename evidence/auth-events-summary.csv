@@ -1,0 +1,7 @@
+TimeCreatedUtc,TimeCreatedSingapore,RecordId,EventId,EventMeaning,TargetUser,LogonTypeCode,LogonTypeMeaning,StatusCode,StatusMeaning
+2026-09-06T02:28:01.458Z,2026-09-06T10:28:01.458+08:00,43450,4720,User account created,soc-test,,,,Not applicable
+2026-09-06T02:55:49.122Z,2026-09-06T10:55:49.122+08:00,43643,4625,Failed logon,soc-test,2,Interactive,0xC000006A,Incorrect password
+2026-09-06T02:57:40.524Z,2026-09-06T10:57:40.524+08:00,43708,4625,Failed logon,soc-test,2,Interactive,0xC000006A,Incorrect password
+2026-09-06T02:57:47.943Z,2026-09-06T10:57:47.943+08:00,43709,4740,User account locked out,soc-test,,,,Not applicable
+2026-09-06T02:57:47.946Z,2026-09-06T10:57:47.946+08:00,43710,4625,Failed logon,soc-test,2,Interactive,0xC000006A,Incorrect password
+2026-09-06T03:04:12.161Z,2026-09-06T11:04:12.161+08:00,43775,4624,Successful logon,soc-test,2,Interactive,,Not applicable
