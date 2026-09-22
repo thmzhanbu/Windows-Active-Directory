@@ -1,0 +1,34 @@
+<!--
+  Focused configuration for an isolated Windows lab. Not a production baseline.
+  Process/DNS events can contain private data; review exports before publishing.
+  NetworkConnect (Event 3) records TCP/UDP, not ICMP. Use curl.exe or a TCP test
+  from PowerShell to validate it; a successful ping is not an Event 3 test.
+  Check the installed binary's schema with Sysmon -s and confirm the applied
+  configuration with Sysmon -c. XML well-formedness alone is not runtime validation.
+-->
+<Sysmon schemaversion="4.82">
+  <HashAlgorithms>SHA256</HashAlgorithms>
+  <CheckRevocation>True</CheckRevocation>
+  <EventFiltering>
+    <!-- Empty exclude: include every process creation (Event 1). -->
+    <ProcessCreate onmatch="exclude" />
+    <!-- Same-field alternatives are OR; other programs' connections are excluded. -->
+    <NetworkConnect onmatch="include">
+      <Image condition="end with">\powershell.exe</Image>
+      <Image condition="end with">\pwsh.exe</Image>
+      <Image condition="end with">\curl.exe</Image>
+      <Image condition="end with">\nslookup.exe</Image>
+      <Image condition="end with">\msedge.exe</Image>
+    </NetworkConnect>
+    <!-- Only file creations under the dedicated lab directory (Event 11). -->
+    <FileCreate onmatch="include">
+      <TargetFilename condition="begin with">C:\Lab\</TargetFilename>
+    </FileCreate>
+    <!-- Events 12/13/14. This prefix also matches RunOnce and related Run keys. -->
+    <RegistryEvent onmatch="include">
+      <TargetObject condition="contains">\Software\Microsoft\Windows\CurrentVersion\Run</TargetObject>
+    </RegistryEvent>
+    <!-- Empty exclude: include every DNS query (Event 22). -->
+    <DnsQuery onmatch="exclude" />
+  </EventFiltering>
+</Sysmon>
