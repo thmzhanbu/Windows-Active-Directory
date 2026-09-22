@@ -1,6 +1,4 @@
-# Screenshot review — all 34 original PNGs
-
-Reviewed visually on 22 September 2026. Source: the original project’s `Screenshots` folder. Original files were not changed. The names below preserve the original narrow no-break space before AM/PM.
+# Screenshot review 
 
 ## Main finding
 
